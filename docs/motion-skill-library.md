@@ -10,7 +10,17 @@ Este documento organiza as skills de craft/direção de motion que complementam 
 - `npm run sync:agent-skills` atualiza o espelho; `npm run check:skills` valida identidade entre as duas árvores.
 - `agents/openai.yaml`, quando presente, é metadata específica da experiência OpenAI/Codex; a lógica essencial da skill continua em `SKILL.md` e recursos adjacentes.
 
-## Core obrigatório
+## Camada de direção criativa
+Antes do craft de motion, use quando o briefing exigir interpretação:
+- `studio-creative-director`
+
+Ela resolve intenção, público, mensagem, restrições, assumptions e ambiguidades antes de passar o trabalho para o motion director. A política é: recuperar contexto primeiro, inferir lacunas seguras, assumir defaults reversíveis e perguntar somente quando respostas diferentes mudariam materialmente o resultado.
+
+Fluxo preferencial:
+
+`studio-creative-director` → `studio-motion-director` → skills de craft/estilo/técnica → `studio-qa-art-direction`.
+
+## Core de motion
 Carregue para qualquer peça relevante:
 - `studio-motion-director`
 - `studio-motion-foundations`
@@ -80,14 +90,16 @@ Escolha a solução mais simples que atinja a estética:
 
 ## Estratégia anti-template
 Antes de implementar, o agente deve responder internamente:
-1. Qual é o herói de cada beat?
-2. Onde está o pico de energia?
-3. Onde está o hold de leitura?
-4. Qual material/peso está sendo comunicado?
-5. Onde o olhar deve terminar para preparar a próxima cena?
-6. Qual efeito pode ser removido sem perda narrativa? Se a resposta for “quase todos”, o motion está decorativo demais.
+1. Qual é o objetivo real da peça e o que o usuário quer que o público sinta/faça?
+2. Qual é o herói de cada beat?
+3. Onde está o pico de energia?
+4. Onde está o hold de leitura?
+5. Qual material/peso está sendo comunicado?
+6. Onde o olhar deve terminar para preparar a próxima cena?
+7. Qual efeito pode ser removido sem perda narrativa? Se a resposta for “quase todos”, o motion está decorativo demais.
 
 ## Definition of Done transversal
+- intenção criativa resolvida antes do craft quando necessário;
 - movimento frame-based e determinístico;
 - hierarquia temporal perceptível;
 - contraste entre ação e repouso;

@@ -22,6 +22,13 @@
 - Após criar, remover ou alterar qualquer skill em `.agents/skills/`, execute `npm run sync:agent-skills` e depois `npm run check:skills`.
 - Arquivos `agents/openai.yaml` dentro de uma skill são metadados específicos da experiência OpenAI/Codex. Eles não substituem o `SKILL.md` e não devem conter a única cópia de regras essenciais de craft ou arquitetura.
 
+### Creative Direction
+
+- Em trabalho criativo novo ou materialmente ambíguo, resolva a intenção antes da implementação. Use `studio-creative-director` quando objetivo, público, mensagem, formato, restrições ou intenção ainda exigirem interpretação.
+- Antes de perguntar, recupere decisões já tomadas e inspecione contexto, `project.config.ts`, `notes.md`, assets e referências disponíveis.
+- Prefira inferências seguras e defaults reversíveis a perguntas desnecessárias. Pergunte somente quando respostas plausíveis diferentes mudariam materialmente o conceito ou o entregável.
+- O usuário continua sendo a autoridade final: sinalize trade-offs quando necessário, mas não substitua silenciosamente decisões criativas explícitas.
+
 ---
 
 ## 2. Estrutura do Repositório
