@@ -1,8 +1,8 @@
 # Claude Code Compatibility
 
-The canonical repository instructions live in `AGENTS.md`.
+@AGENTS.md
 
-Before modifying code, projects, skills, scripts, configuration, or repository structure, read and follow `AGENTS.md` in full.
+This repository keeps its canonical always-on instructions in `AGENTS.md`, imported above so Claude Code receives the same project governance without duplicating it here.
 
 ## Agent Skills
 
