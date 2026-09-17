@@ -1,0 +1,51 @@
+{
+  "name": "motion-design-studio",
+  "version": "1.0.0",
+  "private": true,
+  "sideEffects": [
+    "*.css"
+  ],
+  "description": "Single-package multi-project Remotion workspace for Motion Design",
+  "scripts": {
+    "dev": "remotion preview src/index.ts",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "check:git": "tsx scripts/check-git-safety.ts",
+    "check": "npm run check:git && npm run lint && npm run typecheck",
+    "format": "prettier --write .",
+    "new-project": "tsx scripts/new-project.ts",
+    "render": "tsx scripts/render.ts",
+    "test:smoke": "tsx scripts/smoke-test.ts",
+    "postinstall": "tsx scripts/init-local-registry.ts"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.525",
+    "@remotion/cli": "4.0.525",
+    "@remotion/fonts": "4.0.525",
+    "@remotion/google-fonts": "4.0.525",
+    "@remotion/media-utils": "4.0.525",
+    "@remotion/paths": "4.0.525",
+    "@remotion/player": "4.0.525",
+    "@remotion/renderer": "4.0.525",
+    "@remotion/shapes": "4.0.525",
+    "@remotion/transitions": "4.0.525",
+    "lucide-react": "1.16.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "remotion": "4.0.525",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "@remotion/eslint-plugin": "4.0.525",
+    "@remotion/tailwind-v4": "4.0.525",
+    "@types/node": "22.13.10",
+    "@types/react": "19.2.0",
+    "@types/react-dom": "19.2.0",
+    "eslint": "9.22.0",
+    "prettier": "3.5.3",
+    "tailwindcss": "4.1.3",
+    "tsx": "4.23.13",
+    "typescript": "5.8.2",
+    "typescript-eslint": "8.70.0"
+  }
+}

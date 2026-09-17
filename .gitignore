@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Remotion / outputs
+out/
+.remotion/
+
+# Build / caches
+dist/
+build/
+.cache/
+tmp/
+temp/
+*.tmp
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+
+# Private/local projects
+projects/_private/
+projects/_local/
+
+# Private/local project assets
+public/projects/_private/
+public/projects/_local/
+
+# Private/local registry
+src/core/registry/projects-registry.local.generated.ts
+
+# Private references
+references/private/
+references/local/
+
+# Heavy/project-local media
+public/projects/*/raw/
+public/projects/*/generated/
+public/projects/*/exports/
+public/projects/*/*/raw/
+public/projects/*/*/generated/
+public/projects/*/*/exports/
