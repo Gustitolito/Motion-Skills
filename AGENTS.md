@@ -8,11 +8,19 @@
 
 ## 1. Hierarquia de Conhecimento e Precedência
 
-1. **Skills Oficiais do Remotion (`skills/remotion-*`)**:
+1. **Skills Oficiais do Remotion (`.agents/skills/remotion-*`)**:
    - São a autoridade máxima em relação às APIs do Remotion (`useCurrentFrame`, `interpolate`, `spring`, `Sequence`, `Series`, `delayRender`, `staticFile`, etc.).
-   - Consulte `skills/remotion-best-practices`, `skills/remotion-markup` e `skills/remotion-render`.
-2. **AGENTS.md & Skills do Estúdio (`skills/studio-*`)**:
+   - Consulte `.agents/skills/remotion-best-practices`, `.agents/skills/remotion-markup` e `.agents/skills/remotion-render`.
+2. **AGENTS.md & Skills do Estúdio (`.agents/skills/studio-*`)**:
    - Têm **precedência estrita** sobre qualquer decisão de organização interna do repositório, estrutura de pastas, convenções de contratos, presets de renderização e scripts CLI.
+
+### Agent Skills: fonte de verdade e compatibilidade
+
+- `.agents/skills/` é a **fonte canônica** de todas as Agent Skills deste repositório.
+- Skills são descobertas pelo agente principalmente por `name` e `description` do frontmatter do `SKILL.md`; não replique catálogos ou regras de roteamento específicas de cada skill neste `AGENTS.md`.
+- `.claude/skills/` é um **espelho gerado** da árvore canônica para compatibilidade nativa com Claude Code. **Nunca edite esse espelho manualmente**.
+- Após criar, remover ou alterar qualquer skill em `.agents/skills/`, execute `npm run sync:agent-skills` e depois `npm run check:skills`.
+- Arquivos `agents/openai.yaml` dentro de uma skill são metadados específicos da experiência OpenAI/Codex. Eles não substituem o `SKILL.md` e não devem conter a única cópia de regras essenciais de craft ou arquitetura.
 
 ---
 
@@ -22,6 +30,10 @@
 Motion Design/
 ├── package.json                         # Dependências compartilhadas da raiz (Remotion 4.0.525, React 19)
 ├── remotion.config.ts                   # Tailwind v4 bundler override
+├── AGENTS.md                            # Governança canônica do repositório
+├── CLAUDE.md                            # Shim de compatibilidade que aponta para AGENTS.md
+├── .agents/skills/                      # Fonte canônica das Agent Skills
+├── .claude/skills/                      # Espelho gerado para Claude Code (não editar)
 ├── src/
 │   ├── index.ts                         # Entry point Remotion (registerRoot)
 │   ├── core/                            # Engine do estúdio (registry, presets, Studio Root)
@@ -171,7 +183,7 @@ Um agente de IA **NÃO** encerra sua tarefa dizendo que "o código foi modificad
 Antes de finalizar, o agente deve obrigatoriamente executar:
 
 ```bash
-# Validação de Tipos e Regras do ESLint Remotion
+# Validação de sincronização das skills, segurança Git, lint e tipos
 npm run check
 
 # Validação Completa com Render Real (Still + MP4)
@@ -209,4 +221,3 @@ O repositório é a fonte de verdade da infraestrutura do estúdio. Todo agente 
    - Projetos criados com `npm run new-project <slug> --private` devem permanecer estritamente privados em `projects/_private/`, mesmo que seja conveniente ao agente incluí-los em um commit.
 7. **Princípio da Dúvida**:
    - Se houver dúvida sobre a natureza pública ou privada de um arquivo ou asset, trate-o como **privado/local** e **NÃO** o adicione ao Git.
-
