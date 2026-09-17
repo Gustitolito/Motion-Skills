@@ -16,7 +16,10 @@ npm run new-project meu-video
 # Criar um novo projeto privado/confidencial (ignorado pelo Git)
 npm run new-project cliente-secreto --private
 
-# Executar validação de código (Git Safety Check + Lint Remotion + TypeScript)
+# Sincronizar compatibilidade de Agent Skills para Claude Code
+npm run sync:agent-skills
+
+# Executar validação de código (Skills + Git Safety + Lint Remotion + TypeScript)
 npm run check
 
 # Executar suíte completa de testes de fumaça (Check + Still Frame + MP4 Render)
@@ -25,6 +28,19 @@ npm run test:smoke
 # Renderizar vídeo usando presets centralizados
 npm run render -- --composition=demo-showcase-reel --preset=socialH264
 ```
+
+---
+
+## 🤖 Agent Skills
+
+As skills do projeto usam uma fonte de verdade única:
+
+- `.agents/skills/` — árvore canônica, usada por agentes compatíveis com o padrão de skills de projeto.
+- `.claude/skills/` — espelho gerado para discovery nativo no Claude Code; não editar manualmente.
+- `AGENTS.md` — governança canônica e regras permanentes do repositório.
+- `CLAUDE.md` — shim mínimo que direciona o Claude Code para `AGENTS.md`.
+
+Depois de alterar qualquer skill canônica, execute `npm run sync:agent-skills`. O comando `npm run check` inclui `check:skills` e falha se o espelho do Claude estiver divergente.
 
 ---
 
@@ -43,6 +59,7 @@ Consulte o guia completo em [docs/git-and-portability.md](file:///docs/git-and-p
 ## 📚 Documentação do Estúdio
 
 - [docs/architecture.md](file:///docs/architecture.md): Princípios de arquitetura e camadas do estúdio.
+- [docs/motion-skill-library.md](file:///docs/motion-skill-library.md): Taxonomia e direção das skills de motion.
 - [docs/git-and-portability.md](file:///docs/git-and-portability.md): Política de Git, privacidade e portabilidade entre máquinas.
 - [docs/getting-started.md](file:///docs/getting-started.md): Guia de início rápido e preview.
 - [docs/creating-projects.md](file:///docs/creating-projects.md): Criação e contratos de projetos.

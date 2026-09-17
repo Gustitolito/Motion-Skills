@@ -2,6 +2,14 @@
 
 Este documento organiza as skills de craft/direção de motion que complementam as skills oficiais do Remotion. O objetivo é ensinar agentes a tomar decisões estéticas coerentes e traduzi-las para implementações determinísticas em React/TypeScript.
 
+## Discovery e portabilidade
+
+- `.agents/skills/` é a fonte canônica das skills deste repositório.
+- O agente deve descobrir skills pelo frontmatter (`name` + `description`) e carregar o corpo apenas quando relevante.
+- `.claude/skills/` é um espelho gerado para Claude Code e nunca deve ser editado diretamente.
+- `npm run sync:agent-skills` atualiza o espelho; `npm run check:skills` valida identidade entre as duas árvores.
+- `agents/openai.yaml`, quando presente, é metadata específica da experiência OpenAI/Codex; a lógica essencial da skill continua em `SKILL.md` e recursos adjacentes.
+
 ## Core obrigatório
 Carregue para qualquer peça relevante:
 - `studio-motion-director`
