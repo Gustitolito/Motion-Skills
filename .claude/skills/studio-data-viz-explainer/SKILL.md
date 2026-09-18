@@ -1,6 +1,6 @@
 ---
 name: studio-data-viz-explainer
-description: Motion para gráficos, infográficos e explainers com foco em causalidade, comparação, progressão e leitura de dados.
+description: "Motion para gráficos, infográficos e explainers orientado a causalidade e comparação. Use when: dados, relações, progressões ou estados precisam ser explicados visualmente. NOT for: gráficos puramente decorativos ou motion sem conteúdo informacional."
 ---
 
 # Studio Data Viz & Explainer

@@ -1,6 +1,6 @@
 ---
 name: studio-brand-logo-ui
-description: Motion para logo, identidade de marca, UI e produto com comportamento consistente, reconhecível e reutilizável.
+description: "Sistema de motion para logo, identidade de marca, UI e produto. Use when: a peça precisa de comportamento de marca reutilizável, reveal de logo ou causa-e-efeito de interface. NOT for: motion genérico sem requisito de marca/UI ou pós-produção final."
 ---
 
 # Studio Brand, Logo & UI Motion

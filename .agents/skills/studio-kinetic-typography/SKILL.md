@@ -1,6 +1,6 @@
 ---
 name: studio-kinetic-typography
-description: Direção de tipografia cinética para títulos, frases, captions, promos e explainers com ritmo, legibilidade e hierarquia verbal.
+description: "Direção de tipografia cinética com ritmo e hierarquia verbal. Use when: texto é protagonista em títulos, frases, manifesto, captions ou explainers. NOT for: texto passivo que só precisa permanecer legível ou motion sem ênfase tipográfica."
 ---
 
 # Studio Kinetic Typography

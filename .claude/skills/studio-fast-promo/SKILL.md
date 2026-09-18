@@ -1,6 +1,6 @@
 ---
 name: studio-fast-promo
-description: Motion promocional rápido, rampas de velocidade, transições direcionais e edição orientada a impacto com leitura clara.
+description: "Motion promocional rápido, rampas e transições orientadas a impacto. Use when: lançamento, urgência, performance ou edição de alta energia precisam de ataques curtos e micro-holds. NOT for: leitura longa, documental ou institucional sóbrio."
 ---
 
 # Studio Fast Promo

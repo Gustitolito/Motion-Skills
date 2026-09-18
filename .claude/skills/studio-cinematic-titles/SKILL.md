@@ -1,6 +1,6 @@
 ---
 name: studio-cinematic-titles
-description: Títulos cinematográficos, teasers e aberturas com staging, escala, câmera, tipografia, atmosfera e construção dramática.
+description: "Títulos cinematográficos, teasers e aberturas com construção dramática. Use when: tipografia, câmera, atmosfera, escala e revelação sustentam tensão ou narrativa. NOT for: lower thirds utilitários, captions comuns ou peças editoriais discretas."
 ---
 
 # Studio Cinematic Titles
