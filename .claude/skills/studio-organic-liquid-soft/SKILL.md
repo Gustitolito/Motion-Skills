@@ -1,6 +1,6 @@
 ---
 name: studio-organic-liquid-soft
-description: Motion orgânico, líquido e macio: blobs, gotas, ondas, morphs, floating e comportamento viscoso estilizado em Remotion.
+description: "Motion orgânico, líquido e macio com blobs, morphs e floating. Use when: fluidez, viscosidade estilizada, cosmético, wellness ou naturalidade são centrais. NOT for: fluidos fotorealistas, cloth complexo ou impacto rígido/cartoon."
 ---
 
 # Studio Organic, Liquid & Soft

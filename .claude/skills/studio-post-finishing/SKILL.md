@@ -1,6 +1,6 @@
 ---
 name: studio-post-finishing
-description: Pós-produção e acabamento: color, glow, grain, blur, vignette, lens-like effects, compositing e consistência final.
+description: "Pós-produção e acabamento de cor, glow, grain, blur e compositing. Use when: o motion e a composição já estão resolvidos e precisam de acabamento visual consistente. NOT for: corrigir layout/motion fraco ou definir a linguagem principal da peça."
 ---
 
 # Studio Post Finishing

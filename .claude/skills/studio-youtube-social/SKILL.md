@@ -1,6 +1,6 @@
 ---
 name: studio-youtube-social
-description: Motion para YouTube, Reels e social com retenção, capítulos, lower thirds, captions e ritmo visual orientado a narrativa.
+description: "Motion para YouTube, Reels e social orientado a narrativa e retenção. Use when: capítulos, captions, lower thirds, punch-ins e mudanças visuais precisam acompanhar conteúdo falado/social. NOT for: filme de marca sem lógica de retenção ou motion puramente cinematográfico."
 ---
 
 # Studio YouTube & Social

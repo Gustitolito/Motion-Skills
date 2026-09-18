@@ -1,6 +1,6 @@
 ---
 name: studio-smooth-premium
-description: Motion suave, refinado e premium com desaceleração longa, micro-overlap, depth sutil e ausência de bounce gratuito.
+description: "Motion suave, refinado e premium com desaceleração longa e micro-overlap. Use when: confiança, luxo, precisão, calma ou sofisticação pedem movimento contido. NOT for: cartoon, impacto exagerado, promo agressivo ou bounce como linguagem."
 ---
 
 # Studio Smooth Premium
