@@ -1,6 +1,6 @@
 ---
 name: studio-depth-camera-2p5d
-description: Profundidade, parallax, câmera 2.5D, perspectiva e movimentos de cena que preservam eyetrace e hierarquia.
+description: "Profundidade, parallax, câmera 2.5D e perspectiva com eyetrace controlado. Use when: deslocamento entre planos, câmera ou foco espacial melhora leitura e hierarquia. NOT for: transições planas simples ou 3D complexo que exige pipeline dedicado."
 ---
 
 # Studio Depth, Camera & 2.5D

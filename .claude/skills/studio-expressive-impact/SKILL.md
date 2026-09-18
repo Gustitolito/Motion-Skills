@@ -1,6 +1,6 @@
 ---
 name: studio-expressive-impact
-description: Motion expressivo, cartoon e impactante com anticipation, squash/stretch, overshoot, recoil e contraste forte de energia.
+description: "Motion expressivo/cartoon com anticipation, squash/stretch, overshoot e recoil. Use when: impacto, humor, atitude ou energia exagerada são parte da linguagem. NOT for: institucional sóbrio, premium contido ou animação sem resposta física."
 ---
 
 # Studio Expressive Impact

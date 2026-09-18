@@ -1,6 +1,6 @@
 ---
 name: studio-particles-bursts
-description: Partículas, bursts, confetes, sparks estilizados e microdetalhes de impacto com aleatoriedade determinística e direção controlada.
+description: "Partículas, bursts, confetes e sparks com emissão determinística. Use when: impacto, celebração, atmosfera ou trilhas de movimento pedem partículas causadas por um evento. NOT for: preenchimento decorativo genérico ou efeitos contínuos sem origem narrativa."
 ---
 
 # Studio Particles & Bursts

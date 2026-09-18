@@ -1,6 +1,6 @@
 ---
 name: studio-paper-fabric-texture
-description: Linguagem tátil de papel, recortes, tecido, ribbons e materiais flexíveis, com textura, dobras e comportamento visual coerente.
+description: "Linguagem tátil de papel, recortes, tecido e ribbons. Use when: materialidade artesanal/editorial, dobras, rigidez ou follow-through flexível precisam aparecer no movimento. NOT for: peças sem função material ou simulação física de cloth realista."
 ---
 
 # Studio Paper, Fabric & Texture

@@ -1,6 +1,6 @@
 ---
 name: studio-stop-motion-collage
-description: Stop motion, stepped animation, cutout e collage com poses quantizadas, imperfeições determinísticas e sensação artesanal.
+description: "Stop motion, cutout e collage com poses quantizadas e imperfeição controlada. Use when: estética artesanal, stepped animation ou recorte editorial são parte da linguagem. NOT for: movimento contínuo/premium ou jitter decorativo sem lógica de pose."
 ---
 
 # Studio Stop Motion & Collage

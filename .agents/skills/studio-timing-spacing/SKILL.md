@@ -1,6 +1,6 @@
 ---
 name: studio-timing-spacing
-description: Direção temporal de motion: timing, spacing, holds, contrastes de velocidade, stagger, overlap, settle e eyetrace.
+description: "Direção temporal de timing, spacing, holds, stagger, overlap e eyetrace. Use when: ritmo, contraste de velocidade ou leitura temporal precisam ser desenhados com precisão. NOT for: tarefas sem animação relevante ou decisões puramente de marca/briefing."
 ---
 
 # Studio Timing & Spacing

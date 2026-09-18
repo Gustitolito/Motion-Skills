@@ -1,6 +1,6 @@
 ---
 name: studio-qa-art-direction
-description: QA visual e direção de arte para evitar motion genérico, inconsistências, excesso de efeitos e falhas de hierarquia.
+description: "QA visual e direção de arte final contra motion genérico e inconsistências. Use when: uma implementação está pronta para revisão de hierarquia, ritmo, material, efeitos e acabamento. NOT for: briefing inicial, roteamento de skills ou implementação cotidiana."
 ---
 
 # Studio QA & Art Direction

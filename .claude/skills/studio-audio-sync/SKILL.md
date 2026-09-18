@@ -1,6 +1,6 @@
 ---
 name: studio-audio-sync
-description: Sincronização audiovisual, SFX, transientes, accents, whooshes e desenho rítmico para motion em Remotion.
+description: "Sincronização audiovisual, SFX, transientes e desenho rítmico. Use when: áudio, música, whooshes, hits ou cues precisam participar da direção e do timing visual. NOT for: peças sem áudio relevante ou simples configuração de exportação sonora."
 ---
 
 # Studio Audio Sync

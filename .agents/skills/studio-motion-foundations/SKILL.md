@@ -1,6 +1,6 @@
 ---
 name: studio-motion-foundations
-description: Fundamentos universais de craft em motion: staging, hierarchy, anticipation, follow-through, overlap, mass, material e continuidade visual.
+description: "Fundamentos de staging, hierarchy, anticipation, follow-through, overlap, mass, material e continuidade. Use when: uma animação relevante precisa de craft de movimento, peso ou causalidade. NOT for: alterações mecânicas triviais ou tarefas puramente de render/export."
 ---
 
 # Studio Motion Foundations

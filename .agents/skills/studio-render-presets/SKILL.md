@@ -1,6 +1,6 @@
 ---
 name: studio-render-presets
-description: Catálogo de presets de exportação, render headless e rotinas de smoke test
+description: "Presets de exportação, render headless e smoke test do estúdio. Use when: renderizar, exportar, validar codec/preset ou executar testes de saída. NOT for: direção de motion, composição visual ou escolha estética."
 ---
 
 # Studio Render Presets

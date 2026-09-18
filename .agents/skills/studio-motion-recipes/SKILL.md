@@ -1,6 +1,6 @@
 ---
 name: studio-motion-recipes
-description: Primitivas de física, presets de spring, tipografia cinética e componentes de motion design do estúdio
+description: "Primitivas e componentes reutilizáveis de motion do estúdio. Use when: implementar springs, kinetic text, grids, safe zones ou receitas compartilhadas já existentes. NOT for: escolher a direção criativa, linguagem dominante ou arquitetura geral do projeto."
 ---
 
 # Studio Motion Recipes

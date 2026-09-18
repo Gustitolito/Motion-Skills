@@ -1,6 +1,6 @@
 ---
 name: studio-institutional-editorial
-description: Motion institucional, corporativo, editorial e documental com sobriedade, clareza, credibilidade e hierarquia informacional.
+description: "Motion institucional, corporativo, editorial e documental com clareza e credibilidade. Use when: informação, dados, nomes, cargos ou narrativa factual precisam de hierarquia sóbria. NOT for: hype agressivo, cartoon ou estética de impacto como protagonista."
 ---
 
 # Studio Institutional & Editorial

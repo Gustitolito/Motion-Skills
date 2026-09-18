@@ -1,6 +1,6 @@
 ---
 name: studio-conventions
-description: Convenções de arquitetura, contratos tipados e organização do Motion Design Studio
+description: "Convenções de arquitetura, contratos tipados e organização do Motion Design Studio. Use when: criar/modificar projetos, registrar composições, organizar pastas ou seguir contratos do workspace. NOT for: decisões estéticas de motion, timing ou direção criativa."
 ---
 
 # Studio Conventions (Motion Design Studio)
