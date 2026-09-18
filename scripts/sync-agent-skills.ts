@@ -39,16 +39,132 @@ const listFiles = (directory: string): string[] => {
   return files.sort();
 };
 
+const decodeScalar = (raw: string, file: string, key: string): string => {
+  const value = raw.trim();
+  if (!value) {
+    fail(`${file}: frontmatter field "${key}" must not be empty.`);
+  }
+
+  if (value.startsWith('"')) {
+    if (!value.endsWith('"')) {
+      fail(`${file}: unterminated double-quoted value for "${key}".`);
+    }
+    try {
+      return JSON.parse(value) as string;
+    } catch {
+      fail(`${file}: invalid double-quoted value for "${key}".`);
+    }
+  }
+
+  if (value.startsWith("'")) {
+    if (!value.endsWith("'")) {
+      fail(`${file}: unterminated single-quoted value for "${key}".`);
+    }
+    return value.slice(1, -1).replaceAll("''", "'");
+  }
+
+  // YAML plain scalars cannot safely contain ": " without quoting.
+  if (value.includes(': ')) {
+    fail(`${file}: unquoted ": " in frontmatter field "${key}". Quote the value or use a block scalar.`);
+  }
+
+  return value;
+};
+
+const parseFrontmatter = (skillFile: string): Map<string, string> => {
+  const source = readFileSync(skillFile, 'utf8').replaceAll('\r\n', '\n');
+  const lines = source.split('\n');
+  const relativeFile = relative(root, skillFile).replaceAll('\\', '/');
+
+  if (lines[0] !== '---') {
+    fail(`${relativeFile}: SKILL.md must start with YAML frontmatter.`);
+  }
+
+  const end = lines.indexOf('---', 1);
+  if (end === -1) {
+    fail(`${relativeFile}: YAML frontmatter is missing its closing "---".`);
+  }
+
+  const fields = new Map<string, string>();
+
+  for (let i = 1; i < end; i++) {
+    const line = lines[i];
+    if (!line.trim() || line.trimStart().startsWith('#')) continue;
+
+    if (/^\s/.test(line)) {
+      fail(`${relativeFile}: unexpected indented frontmatter line ${i + 1}.`);
+    }
+
+    const match = /^([A-Za-z0-9_-]+):(?:\s*(.*))?$/.exec(line);
+    if (!match) {
+      fail(`${relativeFile}: invalid frontmatter syntax on line ${i + 1}.`);
+    }
+
+    const [, key, rawValue = ''] = match;
+    if (fields.has(key)) {
+      fail(`${relativeFile}: duplicate frontmatter field "${key}".`);
+    }
+
+    if (rawValue === '|' || rawValue === '>') {
+      const block: string[] = [];
+      while (i + 1 < end && /^\s+/.test(lines[i + 1])) {
+        i += 1;
+        block.push(lines[i].trim());
+      }
+      const value = rawValue === '>' ? block.join(' ') : block.join('\n');
+      if (!value.trim()) {
+        fail(`${relativeFile}: block scalar "${key}" must not be empty.`);
+      }
+      fields.set(key, value);
+      continue;
+    }
+
+    fields.set(key, decodeScalar(rawValue, relativeFile, key));
+  }
+
+  return fields;
+};
+
 const validateCanonical = () => {
   const skillDirs = readdirSync(canonical, {withFileTypes: true}).filter((entry) => entry.isDirectory());
   if (skillDirs.length === 0) {
     fail('No skills found in .agents/skills/.');
   }
 
+  const seenNames = new Set<string>();
+
   for (const skillDir of skillDirs) {
     const skillFile = join(canonical, skillDir.name, 'SKILL.md');
     if (!existsSync(skillFile) || !statSync(skillFile).isFile()) {
       fail(`Missing SKILL.md in .agents/skills/${skillDir.name}/.`);
+    }
+
+    const frontmatter = parseFrontmatter(skillFile);
+    const name = frontmatter.get('name');
+    const description = frontmatter.get('description');
+
+    if (!name) {
+      fail(`.agents/skills/${skillDir.name}/SKILL.md: missing required frontmatter field "name".`);
+    }
+    if (name !== skillDir.name) {
+      fail(`.agents/skills/${skillDir.name}/SKILL.md: frontmatter name "${name}" must match directory "${skillDir.name}".`);
+    }
+    if (seenNames.has(name)) {
+      fail(`Duplicate skill name "${name}".`);
+    }
+    seenNames.add(name);
+
+    if (!description?.trim()) {
+      fail(`.agents/skills/${skillDir.name}/SKILL.md: missing required frontmatter field "description".`);
+    }
+
+    if (name.startsWith('studio-')) {
+      if (!description.includes('Use when:')) {
+        fail(`.agents/skills/${skillDir.name}/SKILL.md: studio skill description must include "Use when:".`);
+      }
+      if (!description.includes('NOT for:')) {
+        fail(`.agents/skills/${skillDir.name}/SKILL.md: studio skill description must include "NOT for:".`);
+      }
     }
   }
 };
@@ -88,7 +204,7 @@ if (checkOnly) {
     fail(`Claude skill mirror is out of sync (${issues.join('; ')}). Run npm run sync:agent-skills.`);
   }
 
-  console.log('[agent-skills] OK: .claude/skills mirrors .agents/skills exactly.');
+  console.log('[agent-skills] OK: skill frontmatter is valid and .claude/skills mirrors .agents/skills exactly.');
   process.exit(0);
 }
 

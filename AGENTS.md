@@ -17,17 +17,18 @@
 ### Agent Skills: fonte de verdade e compatibilidade
 
 - `.agents/skills/` é a **fonte canônica** de todas as Agent Skills deste repositório.
-- Skills são descobertas pelo agente principalmente por `name` e `description` do frontmatter do `SKILL.md`; não replique catálogos ou regras de roteamento específicas de cada skill neste `AGENTS.md`.
+- Skills são descobertas pelo agente principalmente por `name` e `description` do frontmatter do `SKILL.md`. Para skills `studio-*`, a descrição é um **contrato de roteamento** e deve explicitar `Use when:` e `NOT for:`.
+- Não replique catálogos ou regras específicas de cada skill neste `AGENTS.md`; deixe o detalhe no `SKILL.md` e em `references/`.
+- Use **progressive disclosure**: não carregue a biblioteca inteira por padrão. Descubra pela descrição, carregue a skill relevante e abra referências adjacentes somente quando a decisão realmente exigir.
 - `.claude/skills/` é um **espelho gerado** da árvore canônica para compatibilidade nativa com Claude Code. **Nunca edite esse espelho manualmente**.
-- Após criar, remover ou alterar qualquer skill em `.agents/skills/`, execute `npm run sync:agent-skills` e depois `npm run check:skills`.
+- Após criar, remover ou alterar qualquer skill em `.agents/skills/`, execute `npm run sync:agent-skills` e depois `npm run check:skills`. O check valida frontmatter, identidade da skill e paridade do espelho.
 - Arquivos `agents/openai.yaml` dentro de uma skill são metadados específicos da experiência OpenAI/Codex. Eles não substituem o `SKILL.md` e não devem conter a única cópia de regras essenciais de craft ou arquitetura.
 
 ### Creative Direction
 
-- Em trabalho criativo novo ou materialmente ambíguo, resolva a intenção antes da implementação. Use `studio-creative-director` quando objetivo, público, mensagem, formato, restrições ou intenção ainda exigirem interpretação.
-- Antes de perguntar, recupere decisões já tomadas e inspecione contexto, `project.config.ts`, `notes.md`, assets e referências disponíveis.
-- Prefira inferências seguras e defaults reversíveis a perguntas desnecessárias. Pergunte somente quando respostas plausíveis diferentes mudariam materialmente o conceito ou o entregável.
-- O usuário continua sendo a autoridade final: sinalize trade-offs quando necessário, mas não substitua silenciosamente decisões criativas explícitas.
+- Em trabalho novo ou materialmente ambíguo, use `studio-creative-director` para resolver intenção antes do craft. Se o brief já estiver resolvido ou a mudança for puramente mecânica, não force essa etapa.
+- Antes de perguntar, recupere decisões já tomadas e inspecione contexto, `project.config.ts`, `notes.md`, assets e referências disponíveis. Prefira inferências seguras e defaults reversíveis a perguntas desnecessárias.
+- O usuário continua sendo a autoridade final: sinalize trade-offs relevantes, mas não substitua silenciosamente decisões criativas explícitas.
 
 ---
 
