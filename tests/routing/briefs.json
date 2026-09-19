@@ -1,0 +1,8 @@
+[
+  {"id":"premium","prompt":"Filme de produto de 8 segundos, luxo discreto, sem bounce.","required":["studio-smooth-premium"],"forbidden":["studio-expressive-impact"]},
+  {"id":"promo","prompt":"Teaser vertical de 10 segundos para lançamento de tênis; energia e CTA curto.","required":["studio-fast-promo"],"forbidden":["studio-institutional-editorial"]},
+  {"id":"news","prompt":"Lower third para entrevista de jornal, discreto e informativo.","required":["studio-institutional-editorial"],"forbidden":["studio-fast-promo","studio-expressive-impact"]},
+  {"id":"data","prompt":"Explique três valores em barras com escala consistente e tempo para leitura.","required":["studio-data-viz-explainer"],"forbidden":["studio-particles-bursts"]},
+  {"id":"collage","prompt":"Vinheta de recortes de papel, movimento em passos, textura artesanal.","required":["studio-stop-motion-collage","studio-paper-fabric-texture"],"forbidden":["studio-smooth-premium"]},
+  {"id":"revision","prompt":"Mantenha a direção aprovada. Só corrija o nome no lower third; não altere animações.","required":[],"forbidden":["studio-creative-director","studio-fast-promo"]}
+]

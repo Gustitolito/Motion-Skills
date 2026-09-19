@@ -1,4 +1,12 @@
-# Motion Design Studio
+# Motion-Skills
+
+Direção criativa e motion para agentes de código, com um estúdio Remotion executável.
+
+Pedido → creative director quando necessário → motion director → skills sob demanda → implementação → QA.
+
+Consulte o [catálogo e roteamento](docs/motion-skill-library.md), os [estudos executáveis](projects/motion-reference/notes.md), a [validação](docs/validation.md) e a [origem das skills oficiais](docs/upstream-skills.md).
+
+# Remotion workspace
 
 > Single-Package Multi-Project Remotion Workspace para produção de vídeos programáticos de alta performance com React 19, Tailwind CSS v4 e TypeScript.
 
@@ -52,16 +60,16 @@ Este repositório contém o ambiente completo e independente do estúdio de moti
 - **Isolamento de Mídias Pesadas**: Pastas de vídeos brutos (`raw/`), mídias geradas por IA (`generated/`) e saídas de render (`out/` e `exports/`) não viajam pelo Git.
 - **Configurações Locais**: Crie seu arquivo local `.env` a partir do modelo seguro [.env.example](file:///.env.example).
 
-Consulte o guia completo em [docs/git-and-portability.md](file:///docs/git-and-portability.md) para detalhes de replicação e arquitetura.
+Consulte o guia completo em [docs/git-and-portability.md](docs/git-and-portability.md) para detalhes de replicação e arquitetura.
 
 ---
 
 ## 📚 Documentação do Estúdio
 
-- [docs/architecture.md](file:///docs/architecture.md): Princípios de arquitetura e camadas do estúdio.
-- [docs/motion-skill-library.md](file:///docs/motion-skill-library.md): Taxonomia e direção das skills de motion.
-- [docs/git-and-portability.md](file:///docs/git-and-portability.md): Política de Git, privacidade e portabilidade entre máquinas.
-- [docs/getting-started.md](file:///docs/getting-started.md): Guia de início rápido e preview.
-- [docs/creating-projects.md](file:///docs/creating-projects.md): Criação e contratos de projetos.
-- [docs/render-presets.md](file:///docs/render-presets.md): Presets de renderização (social, master, alpha).
+- [docs/architecture.md](docs/architecture.md): Princípios de arquitetura e camadas do estúdio.
+- [docs/motion-skill-library.md](docs/motion-skill-library.md): Taxonomia e direção das skills de motion.
+- [docs/git-and-portability.md](docs/git-and-portability.md): Política de Git, privacidade e portabilidade entre máquinas.
+- [docs/getting-started.md](docs/getting-started.md): Guia de início rápido e preview.
+- [docs/creating-projects.md](docs/creating-projects.md): Criação e contratos de projetos.
+- [docs/render-presets.md](docs/render-presets.md): Presets de renderização (social, master, alpha).
 - [AGENTS.md](file:///AGENTS.md): Manual de governança obrigatório para agentes de IA.

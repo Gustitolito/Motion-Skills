@@ -1,0 +1,20 @@
+{
+  "source": "remotion-dev/skills",
+  "importedFromRepositoryCommit": "64ec28f95b352be6712c1f8561eab10beb9f0488",
+  "version": "4.0.525",
+  "layout": "router bundle + discovery wrappers",
+  "sha256": {
+    ".agents/skills/remotion-best-practices": "3e56c98f970256f1755fec176b124d97955ca7eeaeae578ef795b63c4f7cbb0b",
+    ".agents/skills/remotion-captions": "809af224f212c3e52c4c7af397c7fd7a0e7ec4bd977b3c84447f7c25dd01868d",
+    ".agents/skills/remotion-create": "eb0a9b1d6eb3b85017cc784056d9dc7888ad44ef9f2591e6285559f783df6ceb",
+    ".agents/skills/remotion-docs": "e1dc955a19a3f674410bede5ecd62543dfcff8a1294b88eff1774785c1c46b35",
+    ".agents/skills/remotion-interactivity": "d0021789b83ad99d05acb8b86c886bfea7f95f180a7e040089be3375187cca40",
+    ".agents/skills/remotion-maps": "062b7554cff60040f81ef42b584f5db3bb436d5cba75cd786c31adafef897077",
+    ".agents/skills/remotion-markup": "07e39999763cd3132ed6c73c1a2ad3f566a748cacdeff238442785fc849e1343",
+    ".agents/skills/remotion-multimedia": "fffaf5d3a3256747f0dbca8aa29f5bcdbd2fda35eff26c83432cc16ebfc31e5d",
+    ".agents/skills/remotion-render": "7c8b9424d8b8bf96e27fd7b66176996874591b025543ebc9c54d014543a680b0",
+    ".agents/skills/remotion-saas": "a0b51ad638ca15c4b030212b37d2616926e32c83119a6a6c9aec464ef227ef6a",
+    ".agents/skills/remotion-studio": "64c425f446df915d01802217231355dfd7a16ff8741208426269ac7165fda061",
+    ".agents/skills/remotion-upgrade": "22c0e8d0ca9761c206f09798df5c90ec282c844deed4de4b539c5beed85c2452"
+  }
+}

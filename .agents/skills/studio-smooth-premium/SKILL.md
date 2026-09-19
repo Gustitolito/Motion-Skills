@@ -39,3 +39,6 @@ bounce; grandes escalas 0→1; glow forte; velocidade uniforme; muitos elementos
 
 ## Done
 Movimento é suave sem parecer lento, há precisão no settle e nenhuma propriedade chama atenção para a técnica em vez do conteúdo.
+
+## Implementation references
+When translating this language into code, load [the motion profile](references/motion-profile.md), then the linked executable recipe as needed.

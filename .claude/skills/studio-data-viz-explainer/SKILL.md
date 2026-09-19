@@ -31,3 +31,6 @@ animar todos os dados simultaneamente; mudar escala durante comparação sem sin
 
 ## Done
 O espectador entende a conclusão visual sem depender da narração para decodificar o gráfico.
+
+## Implementation references
+When translating this language into code, load [the motion profile](references/motion-profile.md), then the linked executable recipe as needed.
