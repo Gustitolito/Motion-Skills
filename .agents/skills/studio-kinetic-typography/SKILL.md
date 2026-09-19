@@ -42,3 +42,6 @@ Use medição real de texto quando necessário, `Sequence` para blocos/palavras 
 
 ## Done
 Texto é legível no ritmo real, hierarquia verbal é evidente e a animação reforça o significado da frase.
+
+## Executable semantic emphasis
+`KineticText` accepts zero-based `emphasis`, `emphasisAnimation`, `emphasisStyle`, `emphasisLead` and `emphasisHold`. Choose indices from meaning, not every Nth word. Delays/holds are frames; convert at the composition fps. `emphasisHold` delays subsequent words, not the composition exit. Example: `<KineticText text="O próximo passo é seu." emphasis={[1]} emphasisAnimation="bounce-pop" emphasisHold={8} />`. `typewriter` remains a discrete word reveal for typing/list contexts; `bounce-pop` is an opt-in accent, not the default for every word. See `reference-promo` for a compiled example.

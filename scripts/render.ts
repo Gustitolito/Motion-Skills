@@ -1,3 +1,4 @@
+import { studioBundlerOverride } from '../src/core/bundler/config';
 import path from 'path';
 import fs from 'fs';
 import { bundle } from '@remotion/bundler';
@@ -65,6 +66,7 @@ async function main() {
   console.log('📦 Empacotando projeto via Remotion Bundler...');
   const bundleLocation = await bundle({
     entryPoint,
+    bundlerOverride: studioBundlerOverride,
   });
 
   // 2. Localizar composição

@@ -1,3 +1,4 @@
+import { studioBundlerOverride } from '../src/core/bundler/config';
 import path from 'path';
 import fs from 'fs';
 import { execSync } from 'child_process';
@@ -22,9 +23,9 @@ async function main() {
   // Empacotamento para os testes de render
   const entryPoint = path.join(process.cwd(), 'src', 'index.ts');
   console.log('🔹 Empacotando bundle para testes visuais...');
-  const bundleLocation = await bundle({ entryPoint });
+  const bundleLocation = await bundle({ entryPoint, bundlerOverride: studioBundlerOverride });
 
-  const testCompId = 'demo-showcase-reel';
+  const testCompId = process.env.SMOKE_COMPOSITION || 'demo-showcase-reel';
   const composition = await selectComposition({
     serveUrl: bundleLocation,
     id: testCompId,
@@ -79,7 +80,7 @@ async function main() {
 
   console.log('══════════════════════════════════════════════════════════════');
   console.log('🎉 TODOS OS SMOKE TESTS PASSARAM COM SUCESSO!');
-  console.log('O ambiente Remotion está 100% validado para produção.');
+  console.log('Smoke aprovado para a composição selecionada: 1 still e 30 frames. Não substitui revisão visual nem validação do vídeo completo.');
   console.log('══════════════════════════════════════════════════════════════\n');
 }
 

@@ -194,7 +194,7 @@ Antes de finalizar, o agente deve obrigatoriamente executar:
 # Validação de sincronização das skills, segurança Git, lint e tipos
 npm run check
 
-# Validação Completa com Render Real (Still + MP4)
+# Smoke de inicialização com render real (não certifica qualidade visual)
 npm run test:smoke
 ```
 
