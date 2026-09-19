@@ -31,3 +31,6 @@ bounce em dados sérios; transições chamativas entre entrevistas; excesso de �
 
 ## Done
 A peça parece atual sem perder credibilidade, e nenhuma animação prejudica entendimento ou tom editorial.
+
+## Implementation references
+When translating this language into code, load [the motion profile](references/motion-profile.md), then the linked executable recipe as needed.

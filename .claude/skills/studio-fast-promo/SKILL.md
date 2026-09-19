@@ -31,3 +31,6 @@ cortar sem tempo de leitura; zoom em todo beat; transições diferentes a cada p
 
 ## Done
 A peça parece rápida porque o ritmo é bem dirigido, não porque tudo se move o tempo inteiro.
+
+## Implementation references
+When translating this language into code, load [the motion profile](references/motion-profile.md), then the linked executable recipe as needed.

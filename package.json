@@ -10,15 +10,19 @@
     "dev": "remotion preview src/index.ts",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "sync:agent-skills": "tsx scripts/sync-agent-skills.ts",
-    "check:skills": "tsx scripts/sync-agent-skills.ts --check",
-    "check:git": "tsx scripts/check-git-safety.ts",
+    "sync:agent-skills": "node --import tsx scripts/sync-agent-skills.ts",
+    "check:skills": "node --import tsx scripts/sync-agent-skills.ts --check",
+    "check:git": "node --import tsx scripts/check-git-safety.ts",
     "check": "npm run check:skills && npm run check:git && npm run lint && npm run typecheck",
     "format": "prettier --write .",
-    "new-project": "tsx scripts/new-project.ts",
-    "render": "tsx scripts/render.ts",
-    "test:smoke": "tsx scripts/smoke-test.ts",
-    "postinstall": "tsx scripts/init-local-registry.ts"
+    "new-project": "node --import tsx scripts/new-project.ts",
+    "render": "node --import tsx scripts/render.ts",
+    "test:smoke": "node --import tsx scripts/smoke-test.ts",
+    "postinstall": "node --import tsx scripts/init-local-registry.ts",
+    "test:projects": "node --import tsx --test tests/projects.test.ts",
+    "test:render": "node --import tsx scripts/test-render.ts",
+    "test:skills": "node --import tsx --test tests/skills.test.ts",
+    "eval:routing": "node --import tsx scripts/eval-routing.ts"
   },
   "dependencies": {
     "@remotion/bundler": "4.0.525",
@@ -48,6 +52,7 @@
     "tailwindcss": "4.1.3",
     "tsx": "4.23.13",
     "typescript": "5.8.2",
-    "typescript-eslint": "8.70.0"
+    "typescript-eslint": "8.70.0",
+    "yaml": "^2.8.1"
   }
 }

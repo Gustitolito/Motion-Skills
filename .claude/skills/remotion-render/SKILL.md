@@ -4,24 +4,4 @@ description: Export a Remotion video
 version: 4.0.525
 ---
 
-## General rendering strategy
-
-Render a video using:
-
-```
-npx remotion render
-```
-
-Full list of options: https://www.remotion.dev/docs/cli/render.md
-
-Render a still using:
-
-```
-npx remotion still
-```
-
-Full list of options: https://www.remotion.dev/docs/cli/still.md
-
-## Transparent videos
-
-See [Transparent videos](./transparent-videos.md) for rendering out a video with transparency.
+Load [the canonical reference](../remotion-best-practices/remotion-render/REFERENCE.md) when this skill applies. Supporting files are relative to that reference.
